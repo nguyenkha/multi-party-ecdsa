@@ -16,7 +16,9 @@
 
 pub mod protocols;
 pub mod utilities;
-#[derive(Copy, PartialEq, Eq, Clone, Debug)]
+
+use serde::{Deserialize, Serialize};
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum Error {
     InvalidKey,
     InvalidSS,

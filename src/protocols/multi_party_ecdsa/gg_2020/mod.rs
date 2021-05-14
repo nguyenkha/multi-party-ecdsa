@@ -20,7 +20,8 @@ pub mod party_i;
 #[cfg(test)]
 mod test;
 
-#[derive(Clone, Debug)]
+use serde::{Deserialize, Serialize};
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct ErrorType {
     error_type: String,
     bad_actors: Vec<usize>,
